@@ -23,30 +23,17 @@ class TDashboardCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TRoundedContainer(
+        showBorder: true,
         onTap: onTap,
-        padding: const EdgeInsets.all(TSizes.ms12),
-        child: Column(children: [
+        padding: const EdgeInsets.all(TSizes.md16),
+        child: Column(
+          crossAxisAlignment:CrossAxisAlignment.start,
+            children: [
           /// HEADING
-          TSectionHeading(title: title, textColor: TColors.textSecondary),
+          TSectionHeading(title: title,textColor: TColors.textSecondary),
           const SizedBox(height: TSizes.sm8),
+          Text(subTitle, style: Theme.of(context).textTheme.headlineSmall),
 
-          Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(subTitle, style: Theme.of(context).textTheme.headlineSmall),
-
-            /// RIGHT SIDE STATES
-            Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  SizedBox(
-                      width:100,
-                      child: Text('From start',
-                        style: Theme.of(context).textTheme.labelMedium,
-                        overflow: TextOverflow.ellipsis,
-                      ))
-            ])
-          ])
         ]));
   }
 }
