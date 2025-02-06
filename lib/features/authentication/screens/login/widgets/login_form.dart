@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/routes/routes.dart';
-import 'package:flutter_admin_web/utils/validators/validation.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../../routes/routes.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
+import '../../../../../utils/validators/validation.dart';
 import '../../../controller/login_controller.dart';
 
 

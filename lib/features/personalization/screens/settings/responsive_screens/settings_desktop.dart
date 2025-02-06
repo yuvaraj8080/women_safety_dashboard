@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/breadcrumbs/breadcrumb_with_heading.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
+import 'package:women_safety_dashboard/utils/constants/sizes.dart';
+import '../../../../../common/widgets/breadcrumbs/breadcrumb_with_heading.dart';
 import '../widgets/image_meta.dart';
 import '../widgets/settings_form.dart';
 
@@ -10,10 +10,10 @@ class SettingsDesktopScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body:SingleChildScrollView(
         child:Padding(
-          padding:EdgeInsets.all(TSizes.sm8),
+          padding:const EdgeInsets.all(TSizes.sm8),
           child:Column(
             crossAxisAlignment:CrossAxisAlignment.start,
             children:[
@@ -21,10 +21,10 @@ class SettingsDesktopScreen extends StatelessWidget {
               TBreadcrumbWithHeading(heading:"Setting", breadcrumbItems:["Setting"],
               returnToPreviousScreen:true,
               ),
-              SizedBox(height:TSizes.sm8),
+              const SizedBox(height:TSizes.sm8),
 
               /// BODY
-              Row(
+              const Row(
                 crossAxisAlignment:CrossAxisAlignment.start,
                 children:[
                   /// PROFILE PIC AND META

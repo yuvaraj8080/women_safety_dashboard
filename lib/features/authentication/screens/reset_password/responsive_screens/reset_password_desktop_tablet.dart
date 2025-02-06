@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/layouts/templates/login_template.drt.dart';
+import '../../../../../common/widgets/layouts/templates/login_template.drt.dart';
 import '../widgets/reset_password_widget.dart';
 
 class ResetPasswordScreenDesktopTablet extends StatelessWidget {

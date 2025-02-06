@@ -1,7 +1,9 @@
+
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/layouts/templates/site_layout.dart';
-import 'package:flutter_admin_web/features/authentication/screens/forget_password/responsive_screens/forget_password_desktop_tablet.dart';
-import 'package:flutter_admin_web/features/authentication/screens/forget_password/responsive_screens/forget_password_mobile.dart';
+import 'package:women_safety_dashboard/features/authentication/screens/forget_password/responsive_screens/forget_password_desktop_tablet.dart';
+import 'package:women_safety_dashboard/features/authentication/screens/forget_password/responsive_screens/forget_password_mobile.dart';
+
+import '../../../../common/widgets/layouts/templates/site_layout.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
   const ForgetPasswordScreen({super.key});

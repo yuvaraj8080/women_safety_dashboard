@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/features/personalization/screens/settings/widgets/settings_form.dart';
+import 'package:women_safety_dashboard/features/personalization/screens/settings/widgets/settings_form.dart';
 import '../../../../../common/widgets/breadcrumbs/breadcrumb_with_heading.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../widgets/image_meta.dart';

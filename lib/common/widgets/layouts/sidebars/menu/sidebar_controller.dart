@@ -1,6 +1,7 @@
-import 'package:flutter_admin_web/routes/routes.dart';
-import 'package:flutter_admin_web/utils/device/device_utility.dart';
 import 'package:get/get.dart';
+
+import '../../../../../routes/routes.dart';
+import '../../../../../utils/device/device_utility.dart';
 
 class SidebarController extends GetxController{
 

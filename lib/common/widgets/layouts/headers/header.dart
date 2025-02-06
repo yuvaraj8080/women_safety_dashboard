@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/images/t_rounded_image.dart';
-import 'package:flutter_admin_web/common/widgets/shimmers/shimmer.dart';
-import 'package:flutter_admin_web/features/authentication/controller/user_controller.dart';
-import 'package:flutter_admin_web/routes/routes.dart';
-import 'package:flutter_admin_web/utils/constants/enums.dart';
-import 'package:flutter_admin_web/utils/constants/image_strings.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
-import 'package:flutter_admin_web/utils/device/device_utility.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-
+import '../../../../features/authentication/controller/user_controller.dart';
+import '../../../../routes/routes.dart';
 import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/enums.dart';
+import '../../../../utils/constants/image_strings.dart';
+import '../../../../utils/constants/sizes.dart';
+import '../../../../utils/device/device_utility.dart';
+import '../../images/t_rounded_image.dart';
+import '../../shimmers/shimmer.dart';
 
 
 /// HEADER WIDGET FOR THE APPLICATION

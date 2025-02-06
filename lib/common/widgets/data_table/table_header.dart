@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/utils/device/device_utility.dart';
 import 'package:iconsax/iconsax.dart';
+
+import '../../../utils/device/device_utility.dart';
 
 class TTableHeader extends StatelessWidget {
   const TTableHeader({super.key, this.onPressed, this.buttonText = "Add", this.searchController, this.searchOnChanged,  this.showLeftWidget = true});

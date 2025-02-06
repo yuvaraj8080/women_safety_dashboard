@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/layouts/headers/header.dart';
-import 'package:flutter_admin_web/common/widgets/layouts/sidebars/sidebar.dart';
+
+import '../../layouts/headers/header.dart';
+import '../../layouts/sidebars/sidebar.dart';
 
 
 class MobileLayout extends StatelessWidget {

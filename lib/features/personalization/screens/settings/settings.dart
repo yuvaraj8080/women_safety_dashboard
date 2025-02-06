@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/layouts/templates/site_layout.dart';
+import 'package:women_safety_dashboard/common/widgets/layouts/templates/site_layout.dart';
 
 import 'responsive_screens/settings_desktop.dart';
 import 'responsive_screens/settings_mobile.dart';

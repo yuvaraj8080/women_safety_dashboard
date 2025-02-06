@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
+import '../../../../../utils/constants/sizes.dart';
 import '../widgets/login_form.dart';
 import '../widgets/login_header.dart';
 

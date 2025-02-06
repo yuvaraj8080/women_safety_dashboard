@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
+
+import '../../../utils/constants/sizes.dart';
 
 class TResponsiveWidget extends StatelessWidget {
   const TResponsiveWidget({super.key, required this.desktop, required this.tablet, required this.mobile});

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/containers/rounded_container.dart';
-import 'package:flutter_admin_web/common/widgets/images/image_uploader.dart';
-import 'package:flutter_admin_web/utils/constants/enums.dart';
-import 'package:flutter_admin_web/utils/constants/image_strings.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:women_safety_dashboard/utils/constants/image_strings.dart';
+
+import '../../../../../common/widgets/containers/rounded_container.dart';
+import '../../../../../common/widgets/images/image_uploader.dart';
+import '../../../../../utils/constants/enums.dart';
+import '../../../../../utils/constants/sizes.dart';
 
 class ImageAndMeta extends StatelessWidget {
   const ImageAndMeta({super.key});

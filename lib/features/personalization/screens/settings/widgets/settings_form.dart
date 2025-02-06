@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/containers/rounded_container.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
-import 'package:flutter_admin_web/utils/validators/validation.dart'; // Ensure you have your validators defined
 import 'package:iconsax/iconsax.dart';
 import 'package:get/get.dart';
+import 'package:women_safety_dashboard/utils/validators/validation.dart';
+import '../../../../../common/widgets/containers/rounded_container.dart';
+import '../../../../../utils/constants/sizes.dart';
 import '../../../controller/setting_controller.dart';
 
 class SettingsForm extends StatelessWidget {

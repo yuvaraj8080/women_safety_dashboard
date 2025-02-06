@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/features/authentication/screens/forget_password/widgets/header_form.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../widgets/header_form.dart';
 
 class ForgetPasswordScreenMobile extends StatelessWidget {
   const ForgetPasswordScreenMobile({super.key});

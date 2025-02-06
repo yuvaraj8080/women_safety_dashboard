@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/features/authentication/screens/reset_password/widgets/reset_password_widget.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
+import 'package:women_safety_dashboard/utils/constants/sizes.dart';
+
+import '../widgets/reset_password_widget.dart';
 
 class ResetPasswordScreenMobile extends StatelessWidget {
   const ResetPasswordScreenMobile({super.key});

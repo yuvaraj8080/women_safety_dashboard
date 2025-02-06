@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/breadcrumbs/breadcrumb_with_heading.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
-
+import '../../../../../common/widgets/breadcrumbs/breadcrumb_with_heading.dart';
+import '../../../../../utils/constants/sizes.dart';
 import '../widgets/form.dart';
 import '../widgets/image_meta.dart';
 

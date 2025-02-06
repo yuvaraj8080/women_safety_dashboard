@@ -1,9 +1,6 @@
-import 'package:flutter_admin_web/utils/formatters/formatter.dart';
 import '../../../utils/constants/enums.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
-import '../../shop/models/address_moder.dart';
-import '../../shop/models/order_model.dart';
+import '../../../utils/formatters/formatter.dart';
 
 /// MODEL CLASS REPRESENTING USER DATA
 class UserModel {
@@ -17,8 +14,6 @@ class UserModel {
   AppRole role;
   DateTime? createdAt;
   DateTime? updatedAt;
-  List<OrderModel>? orders;
-  List<AddressModel>? addresses;
 
   /// CONSTRUCTOR FOR USERMODEL
   UserModel({

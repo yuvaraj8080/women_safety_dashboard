@@ -1,15 +1,16 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_admin_web/data/repositories/authentication/authentication_repositories.dart';
-import 'package:flutter_admin_web/data/repositories/user/user_repository.dart';
-import 'package:flutter_admin_web/features/authentication/controller/user_controller.dart';
-import 'package:flutter_admin_web/features/authentication/models/user_model.dart';
-import 'package:flutter_admin_web/utils/constants/enums.dart';
-import 'package:flutter_admin_web/utils/constants/image_strings.dart';
-import 'package:flutter_admin_web/utils/helpers/network_manager.dart';
-import 'package:flutter_admin_web/utils/popups/full_screen_loader.dart';
-import 'package:flutter_admin_web/utils/popups/loaders.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:women_safety_dashboard/data/repositories/user/user_repository.dart';
+import 'package:women_safety_dashboard/features/authentication/controller/user_controller.dart';
+import 'package:women_safety_dashboard/features/authentication/models/user_model.dart';
+import 'package:women_safety_dashboard/utils/constants/enums.dart';
+import 'package:women_safety_dashboard/utils/helpers/network_manager.dart';
+import 'package:women_safety_dashboard/utils/popups/loaders.dart';
+
+import '../../../data/repositories/authentication/authentication_repositories.dart';
+import '../../../utils/constants/image_strings.dart';
+import '../../../utils/popups/full_screen_loader.dart';
 
 class LoginController extends GetxController{
   static LoginController get instance => Get.find();

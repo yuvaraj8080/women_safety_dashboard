@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/routes/app_routes.dart';
-import 'package:flutter_admin_web/routes/routes.dart';
 import 'package:get/get.dart';
+import 'package:women_safety_dashboard/routes/app_routes.dart';
+import 'package:women_safety_dashboard/routes/routes.dart';
 import 'bindings/general_binding.dart';
 import 'utils/constants/colors.dart';
 import 'utils/constants/text_strings.dart';

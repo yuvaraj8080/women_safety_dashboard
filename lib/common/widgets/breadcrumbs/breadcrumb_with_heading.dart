@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/texts/page_heading.dart';
-import 'package:flutter_admin_web/routes/routes.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+
+import '../../../routes/routes.dart';
+import '../../../utils/constants/sizes.dart';
+import '../texts/page_heading.dart';
 
 class TBreadcrumbWithHeading extends StatelessWidget {
   const TBreadcrumbWithHeading({

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/responsive/responsive_disign.dart';
-import 'package:flutter_admin_web/common/widgets/responsive/screens/desktop_layout.dart';
-import 'package:flutter_admin_web/common/widgets/responsive/screens/mobile_layout.dart';
-import 'package:flutter_admin_web/common/widgets/responsive/screens/tablet_layout.dart';
+
+import '../../responsive/responsive_disign.dart';
+import '../../responsive/screens/desktop_layout.dart';
+import '../../responsive/screens/mobile_layout.dart';
+import '../../responsive/screens/tablet_layout.dart';
 
 class TSiteTemplate extends StatelessWidget {
   const TSiteTemplate({super.key,  this.desktop,  this.tablet,  this.mobile,this.useLayout = true});

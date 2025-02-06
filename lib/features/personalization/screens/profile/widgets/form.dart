@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/containers/rounded_container.dart';
-import 'package:flutter_admin_web/features/authentication/controller/user_controller.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
-import 'package:flutter_admin_web/utils/validators/validation.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:women_safety_dashboard/utils/constants/sizes.dart';
+import 'package:women_safety_dashboard/utils/validators/validation.dart';
+import '../../../../../common/widgets/containers/rounded_container.dart';
+import '../../../../authentication/controller/user_controller.dart';
 
 class ProfileForm extends StatelessWidget {
   const ProfileForm({super.key});

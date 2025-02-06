@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_admin_web/routes/routes.dart';
-import 'package:flutter_admin_web/utils/exceptions/firebase_auth_exceptions.dart';
-import 'package:flutter_admin_web/utils/exceptions/firebase_exceptions.dart';
-import 'package:flutter_admin_web/utils/exceptions/format_exceptions.dart';
-import 'package:flutter_admin_web/utils/exceptions/platform_exceptions.dart';
 import 'package:get/get.dart';
+import '../../../routes/routes.dart';
+import '../../../utils/exceptions/firebase_auth_exceptions.dart';
+import '../../../utils/exceptions/firebase_exceptions.dart';
+import '../../../utils/exceptions/format_exceptions.dart';
+import '../../../utils/exceptions/platform_exceptions.dart';
 
 class AuthenticationRepository extends GetxController{
   static AuthenticationRepository get instance => Get.find();

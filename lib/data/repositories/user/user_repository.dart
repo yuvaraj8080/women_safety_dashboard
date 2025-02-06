@@ -1,16 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_admin_web/data/repositories/authentication/authentication_repositories.dart';
-import 'package:flutter_admin_web/features/authentication/models/user_model.dart';
 import 'package:get/get.dart';
-
-import '../../../features/shop/models/order_model.dart';
+import 'package:women_safety_dashboard/features/authentication/models/user_model.dart';
 import '../../../utils/exceptions/firebase_auth_exceptions.dart';
 import '../../../utils/exceptions/firebase_exceptions.dart';
 import '../../../utils/exceptions/format_exceptions.dart';
 import '../../../utils/exceptions/platform_exceptions.dart';
+import '../authentication/authentication_repositories.dart';
 
 class UserRepository extends GetxController{
   static UserRepository get instance => Get.find();
@@ -105,28 +102,6 @@ class UserRepository extends GetxController{
   }
 
 
-  //// FUNCTION TO FETCH USER DETAILS BASED ON USER ID
-  Future<List<OrderModel>> fetchUserOrders(String userId) async{
-    try{
-      final documentSnapshot = await _db.collection("Orders").where("userId",isEqualTo:userId).get();
-      return documentSnapshot.docs.map((doc) => OrderModel.fromSnapshot(doc)).toList();
-    }
-    on FirebaseAuthException catch(e){
-      throw TFirebaseAuthException(e.code).message;
-    } on FirebaseException catch(e){
-      throw TFirebaseException(e.code).message;
-    } on FormatException catch(_){
-      throw const TFormatException();
-    } on PlatformException catch(e){
-      throw TPlatformException(e.code).message;
-    }
-    catch(e){
-      if (kDebugMode) {
-        print(e.toString());
-      }
-      throw "Something went wrong. Please try again";
-    }
-  }
 
   /// FUNCTION TO STORE USER DATA TO FiRESTORE
   Future<void> deleteUser(String id) async{

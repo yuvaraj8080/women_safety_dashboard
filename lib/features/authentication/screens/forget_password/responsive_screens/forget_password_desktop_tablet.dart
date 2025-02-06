@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/layouts/templates/login_template.drt.dart';
+import '../../../../../common/widgets/layouts/templates/login_template.drt.dart';
 import '../widgets/header_form.dart';
 
 

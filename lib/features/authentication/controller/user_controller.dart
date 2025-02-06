@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/data/repositories/user/user_repository.dart';
-import 'package:flutter_admin_web/routes/routes.dart';
-import 'package:flutter_admin_web/utils/popups/loaders.dart';
 import 'package:get/get.dart';
+import 'package:women_safety_dashboard/data/repositories/user/user_repository.dart';
+import 'package:women_safety_dashboard/routes/routes.dart';
+import 'package:women_safety_dashboard/utils/popups/loaders.dart';
 import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/popups/full_screen_loader.dart';

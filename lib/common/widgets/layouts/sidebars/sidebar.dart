@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_web/common/widgets/images/t_circular_image.dart';
-import 'package:flutter_admin_web/routes/routes.dart';
-import 'package:flutter_admin_web/utils/constants/colors.dart';
-import 'package:flutter_admin_web/utils/constants/image_strings.dart';
-import 'package:flutter_admin_web/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
+import '../../../../routes/routes.dart';
+import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/image_strings.dart';
+import '../../../../utils/constants/sizes.dart';
+import '../../images/t_circular_image.dart';
 import 'menu/menu_items.dart';
 
 class TSidebar extends StatelessWidget {
