@@ -14,6 +14,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+
       title: TTexts.appName,
       themeMode: ThemeMode.light,
       theme: TAppTheme.lightTheme,
