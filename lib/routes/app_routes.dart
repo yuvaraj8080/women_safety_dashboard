@@ -3,6 +3,7 @@ import 'package:women_safety_dashboard/routes/routes.dart';
 import '../features/authentication/screens/forget_password/forget_password.dart';
 import '../features/authentication/screens/login/login.dart';
 import '../features/authentication/screens/reset_password/reset_password.dart';
+import '../features/dashboard/dashboard.dart';
 import '../features/personalization/screens/profile/profile.dart';
 import '../features/personalization/screens/settings/settings.dart';
 import 'routes_middleware.dart';
@@ -14,6 +15,9 @@ class TAppRoute{
     GetPage(name:TRoutes.login, page:()=> const LoginScreen()),
     GetPage(name:TRoutes.forgetPassword, page:()=>const ForgetPasswordScreen()),
     GetPage(name:TRoutes.resetPassword, page:()=> const ResetPasswordScreen()),
+
+    /// DASHBOARD AND MEDIA PAGES HARE
+    GetPage(name:TRoutes.dashboard, page:()=> const DashboardScreen(),middlewares:[TRouteMiddleware()]),
 
     /// SETTINGS & PROFILES HARE
     GetPage(name: TRoutes.settings, page:()=>const SettingsScreen(),middlewares:[TRouteMiddleware()]),

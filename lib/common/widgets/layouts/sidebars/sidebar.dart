@@ -36,13 +36,6 @@ class TSidebar extends StatelessWidget {
 
                       //MENU ITEMS
                         const TMenuItem(route:TRoutes.dashboard,icon:Iconsax.status,itemName:"Dashboard"),
-                        const TMenuItem(route:TRoutes.media,icon:Iconsax.image,itemName:"Media"),
-                        const TMenuItem(route:TRoutes.categories,icon:Iconsax.category_2,itemName:"Categories"),
-                        const TMenuItem(route:TRoutes.brands,icon:Iconsax.dcube,itemName:"Brands"),
-                        const TMenuItem(route:TRoutes.banners,icon:Iconsax.picture_frame,itemName:"Banners"),
-                        const TMenuItem(route:TRoutes.products,icon:Iconsax.note,itemName:"Products"),
-                        const TMenuItem(route:TRoutes.customers,icon:Iconsax.profile_2user,itemName:"Customers"),
-                        const TMenuItem(route:TRoutes.orders,icon:Iconsax.box,itemName:"Orders"),
                         const TMenuItem(route:TRoutes.profile,icon:Iconsax.user,itemName:"Profile"),
                         const TMenuItem(route:TRoutes.settings,icon:Iconsax.setting_2,itemName:"Settings"),
                 ])
