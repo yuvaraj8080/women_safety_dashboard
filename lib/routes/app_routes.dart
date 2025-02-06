@@ -5,7 +5,6 @@ import '../features/authentication/screens/login/login.dart';
 import '../features/authentication/screens/reset_password/reset_password.dart';
 import '../features/dashboard/dashboard.dart';
 import '../features/personalization/screens/profile/profile.dart';
-import '../features/personalization/screens/settings/settings.dart';
 import 'routes_middleware.dart';
 
 
@@ -20,7 +19,6 @@ class TAppRoute{
     GetPage(name:TRoutes.dashboard, page:()=> const DashboardScreen(),middlewares:[TRouteMiddleware()]),
 
     /// SETTINGS & PROFILES HARE
-    GetPage(name: TRoutes.settings, page:()=>const SettingsScreen(),middlewares:[TRouteMiddleware()]),
     GetPage(name: TRoutes.profile, page:()=>const ProfileScreen(),middlewares:[TRouteMiddleware()]),
   ];
 

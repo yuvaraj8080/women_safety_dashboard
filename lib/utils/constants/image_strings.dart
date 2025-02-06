@@ -5,9 +5,9 @@
 class TImages {
 
   // -- App Logos
-  static const String darkAppLogo = "assets/logos/mahakal.png";
-  static const String lightAppLogo = "assets/logos/mahakal.png";
-  static const String AppLogo = "assets/logos/AppLogo.png";
+  // static const String darkAppLogo = "assets/logos/mahakal.png";
+  // static const String lightAppLogo = "assets/logos/mahakal.png";
+  static const String AppLogo = "assets/logos/WomenAppLogo.png";
 
   // -- Default Images
   static const String defaultImage = "assets/images/content/default_image.png";
