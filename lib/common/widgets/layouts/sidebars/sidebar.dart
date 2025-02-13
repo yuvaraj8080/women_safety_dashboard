@@ -37,6 +37,8 @@ class TSidebar extends StatelessWidget {
                       //MENU ITEMS
                         const TMenuItem(route:TRoutes.dashboard,icon:Iconsax.status,itemName:"Dashboard"),
                         const TMenuItem(route:TRoutes.profile,icon:Iconsax.user,itemName:"Profile"),
+                        const TMenuItem(route:TRoutes.live_tracking,icon:Iconsax.location,itemName:"Live Tracking"),
+
                 ])
               )
 
