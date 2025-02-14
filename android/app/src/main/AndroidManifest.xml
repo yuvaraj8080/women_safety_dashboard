@@ -11,7 +11,7 @@
         android:label="women_safety_dashboard"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
-         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBLIxyG1L9vZQI4Ifkn-XPB1SEPZFQ7vRk"/>
+         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyD936E1HZ771E20siQrUZBoXymKWvlt6tQ"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

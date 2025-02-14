@@ -11,9 +11,6 @@ class DashboardDesktopScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final controller = Get.put(DashboardController());
-    // final orderController = Get.put(OrderController());
-    // final customerController = Get.put(CustomerController());
     return Scaffold(
         body: SingleChildScrollView(
           child: Padding(

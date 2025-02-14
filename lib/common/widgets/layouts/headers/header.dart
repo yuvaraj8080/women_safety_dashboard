@@ -41,14 +41,8 @@ class THeader extends StatelessWidget implements PreferredSizeWidget {
                 : null,
 
             /// DESKTOP SEARCH FIELD
-            title: TDeviceUtils.isDesktopScreen(context)
+            title:Text("Women Safety",style:Theme.of(context).textTheme.headlineLarge),
 
-                ? SizedBox(width: 200,
-                child:ElevatedButton(
-                    onPressed:() => Get.offAllNamed(TRoutes.dashboard),
-                    child:const Text("Refresh Dashboard"))
-            )
-                : null,
 
 
             ///  ACTIONS ICON BUTTONS HARE
