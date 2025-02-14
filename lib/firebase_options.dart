@@ -25,15 +25,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -47,33 +41,58 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAvN5rpxXefxaPQqgWyBtpaG9kZKBIWCyk',
-    appId: '1:96016208807:web:33331e0f88f695d0cc5c82',
-    messagingSenderId: '96016208807',
-    projectId: 'flutter-e-commerce-app-93d81',
-    authDomain: 'flutter-e-commerce-app-93d81.firebaseapp.com',
-    databaseURL: 'https://flutter-e-commerce-app-93d81-default-rtdb.firebaseio.com',
-    storageBucket: 'flutter-e-commerce-app-93d81.appspot.com',
-    measurementId: 'G-0070YY2WDW',
+    apiKey: 'AIzaSyCy0q9DhMt6PFuYHpLaELKmXbUC0lUdgZc',
+    appId: '1:1029361731735:web:9fbbb18b8374f8f57f41d2',
+    messagingSenderId: '1029361731735',
+    projectId: 'women-safety-app-67951',
+    authDomain: 'women-safety-app-67951.firebaseapp.com',
+    databaseURL: 'https://women-safety-app-67951-default-rtdb.firebaseio.com',
+    storageBucket: 'women-safety-app-67951.appspot.com',
+    measurementId: 'G-4SW6R729GX',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC6b3IlpYCV3u_55xy-UfAcJAiJRnuUHhc',
-    appId: '1:96016208807:android:1bd3a1e72dec637bcc5c82',
-    messagingSenderId: '96016208807',
-    projectId: 'flutter-e-commerce-app-93d81',
-    databaseURL: 'https://flutter-e-commerce-app-93d81-default-rtdb.firebaseio.com',
-    storageBucket: 'flutter-e-commerce-app-93d81.appspot.com',
+    apiKey: 'AIzaSyBh8A-Pqdd6m2-h70dSBArjMANcAJnB5Co',
+    appId: '1:1029361731735:android:26d3f4b99d5754157f41d2',
+    messagingSenderId: '1029361731735',
+    projectId: 'women-safety-app-67951',
+    databaseURL: 'https://women-safety-app-67951-default-rtdb.firebaseio.com',
+    storageBucket: 'women-safety-app-67951.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA3VhKK46Do72cBJF2Ho94Qrqyp04eL7HM',
-    appId: '1:96016208807:ios:352fb13fbb3c3b81cc5c82',
-    messagingSenderId: '96016208807',
-    projectId: 'flutter-e-commerce-app-93d81',
-    databaseURL: 'https://flutter-e-commerce-app-93d81-default-rtdb.firebaseio.com',
-    storageBucket: 'flutter-e-commerce-app-93d81.appspot.com',
-    iosClientId: '96016208807-a0ac9c9lhufsqe4qpq3j82f5n5mdkkhc.apps.googleusercontent.com',
-    iosBundleId: 'com.example.flutterAdminWeb',
+    apiKey: 'AIzaSyDM_ffMStWf4m6w5bM5zvM02K09-2MhqA0',
+    appId: '1:1029361731735:ios:05ba43e976a575de7f41d2',
+    messagingSenderId: '1029361731735',
+    projectId: 'women-safety-app-67951',
+    databaseURL: 'https://women-safety-app-67951-default-rtdb.firebaseio.com',
+    storageBucket: 'women-safety-app-67951.appspot.com',
+    androidClientId: '1029361731735-0ucrsmm6ru4lpv198ka9h7klgl0mmt61.apps.googleusercontent.com',
+    iosClientId: '1029361731735-jn0us87ffaqdqtj5254uacfcn314082o.apps.googleusercontent.com',
+    iosBundleId: 'com.example.womenSafetyDashboard',
   );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyDM_ffMStWf4m6w5bM5zvM02K09-2MhqA0',
+    appId: '1:1029361731735:ios:05ba43e976a575de7f41d2',
+    messagingSenderId: '1029361731735',
+    projectId: 'women-safety-app-67951',
+    databaseURL: 'https://women-safety-app-67951-default-rtdb.firebaseio.com',
+    storageBucket: 'women-safety-app-67951.appspot.com',
+    androidClientId: '1029361731735-0ucrsmm6ru4lpv198ka9h7klgl0mmt61.apps.googleusercontent.com',
+    iosClientId: '1029361731735-jn0us87ffaqdqtj5254uacfcn314082o.apps.googleusercontent.com',
+    iosBundleId: 'com.example.womenSafetyDashboard',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyCy0q9DhMt6PFuYHpLaELKmXbUC0lUdgZc',
+    appId: '1:1029361731735:web:cc0af0b8f4101bcb7f41d2',
+    messagingSenderId: '1029361731735',
+    projectId: 'women-safety-app-67951',
+    authDomain: 'women-safety-app-67951.firebaseapp.com',
+    databaseURL: 'https://women-safety-app-67951-default-rtdb.firebaseio.com',
+    storageBucket: 'women-safety-app-67951.appspot.com',
+    measurementId: 'G-4GH9C2MXY3',
+  );
+
 }
