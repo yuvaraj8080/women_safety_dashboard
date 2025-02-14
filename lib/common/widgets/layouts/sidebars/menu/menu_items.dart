@@ -24,33 +24,33 @@ class TMenuItem extends StatelessWidget {
         onTap:()=> menuController.menuOnTap(route),
         onHover:(hovering)=> hovering ? menuController.changeHoverItem(route) : menuController.changeHoverItem(''),
         child: Obx(()=>Padding(
-            padding: const EdgeInsets.symmetric(vertical:TSizes.xs4),
-            child: Container(
-                decoration:BoxDecoration(
-                  color:menuController.isHovering(route) || menuController.isActive(route) ?TColors.primary : Colors.transparent,
-                  borderRadius:BorderRadius.circular(TSizes.cardRadiusMd),
-                ),
+          padding: const EdgeInsets.symmetric(vertical:TSizes.xs4),
+          child: Container(
+              decoration:BoxDecoration(
+                color:menuController.isHovering(route) || menuController.isActive(route) ?TColors.primary : Colors.transparent,
+                borderRadius:BorderRadius.circular(TSizes.cardRadiusMd),
+              ),
               child:Row(
-                crossAxisAlignment:CrossAxisAlignment.center,
-                children:[
+                  crossAxisAlignment:CrossAxisAlignment.center,
+                  children:[
 
-                  /// ICON
-                   Padding(
-                    padding: const EdgeInsets.only(left:TSizes.lg24, top:TSizes.md16, bottom:TSizes.md16, right:TSizes.md16),
-                    child: menuController.isActive(route)
-                    ? Icon(icon, size:22, color:TColors.white)
-                    : Icon(icon,size:22, color:menuController.isHovering(route) ? TColors.white : TColors.darkGrey),
-                  ),
+                    /// ICON
+                    Padding(
+                      padding: const EdgeInsets.only(left:TSizes.lg24, top:TSizes.md16, bottom:TSizes.md16, right:TSizes.md16),
+                      child: menuController.isActive(route)
+                          ? Icon(icon, size:22, color:TColors.white)
+                          : Icon(icon,size:22, color:menuController.isHovering(route) ? Colors.black : TColors.darkGrey),
+                    ),
 
-                  /// TEXT
-                  if(menuController.isHovering(route) || menuController.isActive(route))
-                      Flexible(child: Text(itemName,style:Theme.of(context).textTheme.bodyMedium!.apply(color:TColors.white)))
-                  else
+                    /// TEXT
+                    if(menuController.isHovering(route) || menuController.isActive(route))
+                      Flexible(child: Text(itemName,style:Theme.of(context).textTheme.bodyLarge!.apply(color:Colors.black)))
+                    else
                       Flexible(child: Text(itemName,style: Theme.of(context).textTheme.bodyMedium!.apply(color:TColors.darkGrey))),
-                ]
+                  ]
               )
-            ),
           ),
+        ),
         ),
       ),
     );

@@ -20,7 +20,7 @@ class LiveLocationController extends GetxController {
   var markers = <Marker>[].obs;
   var polygons = <Polygon>[].obs;
 
-  Rx<LatLng> initialLatLng = LatLng(28.6472799, 76.8130638).obs;
+  Rx<LatLng> initialLatLng = LatLng(19.1136, 72.8697).obs;
   Rx<GoogleMapController?> googleMapController = Rx<GoogleMapController?>(null);
   int shakeCount = 0;
 

@@ -9,7 +9,7 @@ class TRoutes {
   static const live_tracking = "/live_tracking";
 
   static List sidebarMenuItems = [
-    dashboard,profile,live_tracking
+    dashboard,live_tracking,profile
   ];
 
 }
