@@ -23,7 +23,7 @@ class TAppRoute{
     /// SETTINGS & PROFILES HARE
     GetPage(name: TRoutes.profile, page:()=>const ProfileScreen(),middlewares:[TRouteMiddleware()]),
     // Live Tracking Page
-     GetPage(name: TRoutes.live_tracking, page:()=>LiveTrackingScreen(),middlewares:[TRouteMiddleware()]),
+     GetPage(name: TRoutes.liveTracking, page:()=>LiveTrackingScreen(),middlewares:[TRouteMiddleware()]),
   ];
 
 }

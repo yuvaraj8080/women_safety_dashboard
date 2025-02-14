@@ -48,12 +48,12 @@ class THeader extends StatelessWidget implements PreferredSizeWidget {
             ///  ACTIONS ICON BUTTONS HARE
             actions: [
 
-              /// SEARCH ICON ON MOBILE AND TABLET
-              if(!TDeviceUtils.isDesktopScreen(context)) SizedBox(width: 200,
-                  child:ElevatedButton(
-                      onPressed:() => Get.offAllNamed(TRoutes.dashboard),
-                      child:const Text("Refresh Dashboard"))
-              ),
+              // /// SEARCH ICON ON MOBILE AND TABLET
+              // if(!TDeviceUtils.isDesktopScreen(context)) SizedBox(width: 200,
+              //     child:ElevatedButton(
+              //         onPressed:() => Get.offAllNamed(TRoutes.dashboard),
+              //         child:const Text("Refresh Dashboard"))
+              // ),
 
               /// NOTIFICATION ICON ON MOBILE AND TABLET
               IconButton(

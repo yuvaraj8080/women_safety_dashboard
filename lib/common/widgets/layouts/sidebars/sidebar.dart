@@ -35,14 +35,12 @@ class TSidebar extends StatelessWidget {
                         children:[
                           Text("MENU",style:Theme.of(context).textTheme.bodySmall!.apply(letterSpacingDelta:1.2)),
 
-//MENU ITEMS
                           const TMenuItem(route:TRoutes.dashboard,icon:Iconsax.status,itemName:"Dashboard"),
-                          const TMenuItem(route:TRoutes.live_tracking,icon:Iconsax.location,itemName:"Live Tracking"),
+                          const TMenuItem(route:TRoutes.liveTracking,icon:Iconsax.location,itemName:"Live Tracking"),
                           const TMenuItem(route:TRoutes.profile,icon:Iconsax.user,itemName:"Profile"),
 
                         ])
                 )
-
               ],
             )
         ),

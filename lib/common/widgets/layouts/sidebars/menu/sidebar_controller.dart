@@ -6,7 +6,7 @@ import '../../../../../utils/device/device_utility.dart';
 class SidebarController extends GetxController{
 
   //// ----- i ma changign hare some eror remember it and di=******* login is not corect
-  final activeItem = TRoutes.dashboard.obs;
+  final activeItem = TRoutes.profile.obs;
   final hoverItem = ''.obs;
 
 

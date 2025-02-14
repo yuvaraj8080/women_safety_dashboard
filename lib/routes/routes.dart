@@ -6,10 +6,10 @@ class TRoutes {
   static const dashboard = '/dashboard';
   ///SETTINGS & PROFILE
   static const profile = "/profile";
-  static const live_tracking = "/live_tracking";
+  static const liveTracking = "/live_tracking";
 
   static List sidebarMenuItems = [
-    dashboard,live_tracking,profile
+    dashboard,liveTracking,profile
   ];
 
 }

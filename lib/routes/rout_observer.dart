@@ -23,21 +23,21 @@ class RoutObservers extends GetObserver{
 
 
 
-//
-//   @override
-//   void didPush(Route<dynamic>? route, Route<dynamic>? previousRoute){
-//     final sidebarController = Get.put(SidebarController());
-//
-//     if(route != null){
-//       /// CHECK THE ROUTE NAME AND UPDATES THE ACTIVE ITEM IN THE ACCORDINGLY
-//       for(var routeName in TRoutes.sideMenuItems){
-//         if(route.settings.name == routeName){
-//           sidebarController.activeItem.value = routeName;
-//         }
-//       }
-//     }
-//   }
-//
+
+  @override
+  void didPush(Route<dynamic>? route, Route<dynamic>? previousRoute){
+    final sidebarController = Get.put(SidebarController());
+
+    if(route != null){
+      /// CHECK THE ROUTE NAME AND UPDATES THE ACTIVE ITEM IN THE ACCORDINGLY
+      for(var routeName in TRoutes.sidebarMenuItems){
+        if(route.settings.name == routeName){
+          sidebarController.activeItem.value = routeName;
+        }
+      }
+    }
+  }
+
 
 
 }
