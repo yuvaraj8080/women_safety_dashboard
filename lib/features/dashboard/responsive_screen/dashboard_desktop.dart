@@ -100,7 +100,6 @@ class DashboardDesktopScreen extends StatelessWidget {
                         // const Expanded(child: OrderStatusPieChart())
                       ]
                   )
-
                 ],
               )
           ),
