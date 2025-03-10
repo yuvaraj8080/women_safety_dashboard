@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:women_safety_dashboard/data/repositories/user/user_repository.dart';
 import 'package:women_safety_dashboard/features/authentication/controller/user_controller.dart';
 import 'package:women_safety_dashboard/features/authentication/models/user_model.dart';
@@ -17,19 +16,11 @@ class LoginController extends GetxController{
 
   final hidePassword = true.obs;
   final rememberMe = false.obs;
-  final localStorage = GetStorage();
 
   final email = TextEditingController();
   final password = TextEditingController();
   final loginFormKey = GlobalKey<FormState>();
 
-
-  @override
-  void onInit(){
-    email.text = localStorage.read('REMEMBER_ME_EMAIL') ??'';
-    password.text = localStorage.read('REMEMBER_ME_PASSWORD') ??'';
-    super.onInit();
-  }
 
   /// HANDLES EMAIL AND PASSWORD SIGN IN PROCESS
   Future<void> emailAndPasswordSignIn() async{
@@ -48,13 +39,6 @@ class LoginController extends GetxController{
       if(!loginFormKey.currentState!.validate()){
         TFullScreenLoader.stopLoading();
         return;
-      }
-
-
-      // SAVE DATA IF REMMBER ME IS SELECTED
-      if(rememberMe.value){
-        localStorage.write('REMEMBER_ME_EMAIL',email.text.trim());
-        localStorage.write('REMEMBER_ME_PASSWORD',password.text.trim());
       }
 
 

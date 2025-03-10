@@ -12,9 +12,6 @@ Future<void> main() async {
   // Ensure that widgets are initialized
   WidgetsFlutterBinding.ensureInitialized();
 
-  ///Initialize GetX Local Storage
-  await GetStorage.init();
-
   /// Remove # sign from url
   setPathUrlStrategy();
 
