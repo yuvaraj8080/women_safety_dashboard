@@ -34,5 +34,4 @@ class SidebarController extends GetxController{
     }
   }
 
-
 }
