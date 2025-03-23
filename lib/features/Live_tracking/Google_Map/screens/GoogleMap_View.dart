@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:women_safety_dashboard/features/Live_tracking/Google_Map/repositories/reports_fetching.dart';
 import 'package:women_safety_dashboard/features/Live_tracking/Google_Map/widgets/report_widget.dart';
 import '../controller/LiveLocationController.dart';
 
@@ -11,8 +10,6 @@ class GoogleMap_View_Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    fetchAndPrintReports(); // Assuming this function is defined elsewhere
-
     return Scaffold(
       appBar: AppBar(title: Text("Map View")),
       body: Flex(
@@ -58,13 +55,23 @@ class GoogleMap_View_Screen extends StatelessWidget {
                     itemCount: reports.length,
                     itemBuilder: (context, index) {
                       final report = reports[index];
-                      return ReportWidget(
-                        city: report['IncidentCity'],
-                        description: report['IncidentDescription'],
-                        fullName: report['FullName'],
-                        phoneNo: report['PhoneNo'],
-                        time: report['IncidentDate'].toDate(),
-                        type: report['TitleIncident'],
+                      LatLng reportLocation = LatLng(
+                        double.parse(report['Latitude']),
+                        double.parse(report['Longitude']),
+                      );
+                      return GestureDetector(
+                        onTap: () {
+                          // Move the camera to the report's location
+                          locationController.moveToLocation(reportLocation);
+                        },
+                        child: ReportWidget(
+                          city: report['IncidentCity'],
+                          description: report['IncidentDescription'],
+                          fullName: report['FullName'],
+                          phoneNo: report['PhoneNo'],
+                          time: report['IncidentDate'].toDate(),
+                          type: report['TitleIncident'],
+                        ),
                       );
                     },
                   );

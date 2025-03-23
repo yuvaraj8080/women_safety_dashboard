@@ -26,7 +26,7 @@ class ReportWidget extends StatelessWidget {
     bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
 
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(5),
       child: Stack(
         children: [
           // Glassmorphism background with dynamic shadow
@@ -72,48 +72,48 @@ class ReportWidget extends StatelessWidget {
                         children: [
                           Icon(Icons.location_on_outlined, 
                               color: isDarkMode ? Colors.redAccent : Colors.red[400], 
-                              size: 28),
-                          SizedBox(width: 8),
+                              size: 20),
+                          SizedBox(width:5),
                           Text(
                             city,
                             style: TextStyle(
-                              fontSize: 18.0,
+                              fontSize: 15.0,
                               fontWeight: FontWeight.bold,
                               color: isDarkMode ? Colors.white : Colors.black87,
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 12),
+                      SizedBox(height:5),
                       Row(
                         children: [
                           Icon(Icons.label_important_outline, 
                               color: isDarkMode ? Colors.orangeAccent : Colors.orange[600], 
-                              size: 28),
-                          SizedBox(width: 8),
+                              size: 20),
+                          SizedBox(width:5),
                           Text(
                             'Type: $type',
                             style: TextStyle(
-                              fontSize: 16.0,
+                              fontSize: 12.0,
                               fontWeight: FontWeight.w500,
                               color: isDarkMode ? Colors.grey[300] : Colors.grey[800],
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 12),
+                      SizedBox(height: 5),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Icon(Icons.description_outlined, 
                               color: isDarkMode ? Colors.blueAccent : Colors.blue[400], 
-                              size: 28),
-                          SizedBox(width: 8),
+                              size: 20),
+                          SizedBox(width: 5),
                           Expanded(
                             child: Text(
                               description,
                               style: TextStyle(
-                                fontSize: 16.0,
+                                fontSize: 12.0,
                                 color: isDarkMode ? Colors.white70 : Colors.black87,
                                 fontStyle: FontStyle.italic,
                               ),
@@ -123,33 +123,33 @@ class ReportWidget extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 12),
+                      SizedBox(height:5),
                       Row(
                         children: [
                           Icon(Icons.access_time_outlined, 
                               color: isDarkMode ? Colors.greenAccent : Colors.green[400], 
-                              size: 28),
-                          SizedBox(width: 8),
+                              size:20),
+                          SizedBox(width: 5 ),
                           Text(
                             DateFormat.yMMMd().add_jm().format(time.toLocal()),
                             style: TextStyle(
-                              fontSize: 14.0,
+                              fontSize: 12.0,
                               color: isDarkMode ? Colors.grey[400] : Colors.grey[700],
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 12),
+                      SizedBox(height:5),
                       Row(
                         children: [
                           Icon(Icons.person_outline, 
                               color: isDarkMode ? Colors.purpleAccent : Colors.purple[400], 
-                              size: 28),
-                          SizedBox(width: 8),
+                              size: 20),
+                          SizedBox(width: 5),
                           Text(
-                            'Reported by: $fullName',
+                            'Reported: $fullName',
                             style: TextStyle(
-                              fontSize: 16.0,
+                              fontSize: 12.0,
                               fontWeight: FontWeight.w600,
                               color: isDarkMode ? Colors.white : Colors.black87,
                             ),
