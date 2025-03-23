@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:women_safety_dashboard/common/widgets/containers/rounded_container.dart';
+import 'package:women_safety_dashboard/features/dashboard/dashboard/dashboard_controller.dart';
 import '../../../utils/constants/sizes.dart';
 import '../widgets/dashboard_card.dart';
 import '../widgets/weekly_sales.dart';
@@ -11,6 +14,7 @@ class DashboardDesktopScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dashController = Get.put(DashboardController());
     return Scaffold(
         body: SingleChildScrollView(
           child: Padding(
@@ -28,16 +32,16 @@ class DashboardDesktopScreen extends StatelessWidget {
                      Row(
                         children: [
                           Expanded(child: TDashboardCard(
-                              title: 'Total Crime', subTitle:"5000")),
+                              title: 'Total Crime', subTitle:dashController.totalReportedIncidents.length.toString())),
                           const SizedBox(width: TSizes.ms12),
                            Expanded(child: TDashboardCard(
-                              title: 'Solved Crime', subTitle:"159")),
+                              title: 'Solved Crime', subTitle:"9")),
                           const SizedBox(width: TSizes.ms12),
                           Expanded(child: TDashboardCard(
-                              title: 'Unsolved Crime', subTitle:"57")),
+                              title: 'Unsolved Crime', subTitle:"5")),
                           const SizedBox(width: TSizes.ms12),
                           Expanded(child: TDashboardCard(
-                              title: 'Pending Crime',subTitle: "470")),
+                              title: 'Pending Crime',subTitle: "20")),
                         ]),
                   const SizedBox(height: TSizes.ms12),
 
@@ -51,16 +55,6 @@ class DashboardDesktopScreen extends StatelessWidget {
                                   TRoundedContainer(
                                     child:Column(
                                       children:[
-
-                                        //// CRIME TREND HEADER AND CRIME TYPE SELECT BUTTON  ////
-                                        Row(
-                                          mainAxisAlignment:MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text("Crime Trends",style:Theme.of(context).textTheme.headlineSmall),
-                                            OutlinedButton(onPressed:(){}, child:Text("Harassment"))
-                                          ],
-                                        ),
-                                        /// CRIME TREND GRAPH
                                         const YearlyCrimeReport(),
 
                                       ],
