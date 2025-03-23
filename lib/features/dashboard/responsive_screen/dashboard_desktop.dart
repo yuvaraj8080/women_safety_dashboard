@@ -4,6 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:women_safety_dashboard/common/widgets/containers/rounded_container.dart';
 import 'package:women_safety_dashboard/features/dashboard/dashboard/dashboard_controller.dart';
 import '../../../utils/constants/sizes.dart';
+import '../widgets/IncidentCityPieChart.dart';
 import '../widgets/dashboard_card.dart';
 import '../widgets/weekly_sales.dart';
 
@@ -49,39 +50,24 @@ class DashboardDesktopScreen extends StatelessWidget {
                   Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Expanded(flex: 2,
+                        Expanded(
                             child: Column(
                                 children: [
                                   TRoundedContainer(
                                     child:Column(
                                       children:[
                                         const YearlyCrimeReport(),
-
                                       ],
                                     ),
                                   ),
 
-                                  /// ORDERS
-                                  // TRoundedContainer(
-                                  //     child: Column(
-                                  //         crossAxisAlignment: CrossAxisAlignment
-                                  //             .start,
-                                  //         children: [
-                                  //           Row(
-                                  //             mainAxisAlignment:MainAxisAlignment.spaceBetween ,
-                                  //             children: [
-                                  //               Text("Recent 20 Orders", style: Theme.of(context).textTheme.headlineSmall),
-                                  //               OutlinedButton(onPressed:()=> Get.offNamed(TRoutes.orders),
-                                  //                   child:const Text("View All Orders"))
-                                  //             ],
-                                  //           ), const SizedBox(height: TSizes.xs4),
-                                  //
-                                  //           Obx(() {
-                                  //             if(orderController.isLoading.value) return const TLoaderAnimation();
-                                  //             return const DashboardOrderTable();
-                                  //           }),
-                                  //         ])
-                                  // ),
+                                  TRoundedContainer(
+                                    child:Column(
+                                      children:[
+                                        const CityIncidentOverviewPieChart(),
+                                      ],
+                                    ),
+                                  ),
                                 ]
                             )),
                         const SizedBox(width: TSizes.sm8),

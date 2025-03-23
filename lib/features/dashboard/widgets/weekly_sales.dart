@@ -17,8 +17,6 @@ class YearlyCrimeReport extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 8),
-
         // Header Row
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -27,9 +25,11 @@ class YearlyCrimeReport extends StatelessWidget {
 
             // Dropdown for selecting incident type
             Obx(() {
-              return TRoundedContainer(
-                showBorder:true,padding: const EdgeInsets.all(5),
-                radius: 10,
+              return Container(
+                decoration:BoxDecoration(
+                  borderRadius:BorderRadius.circular(8),
+                  border: Border.all(color: TColors.primary),
+                ),
                 child: DropdownButton<String>(
                   value: controller.selectedIncidentType.value,
                   onChanged: (String? newValue) {
@@ -52,7 +52,7 @@ class YearlyCrimeReport extends StatelessWidget {
         // Bar Graph
         Obx(() {
           return SizedBox(
-            height: 200,
+            height: 150,
             child: BarChart(
               BarChartData(
                 titlesData: buildFlTitlesData(),

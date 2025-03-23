@@ -7,6 +7,8 @@ class DashboardController extends GetxController {
   static DashboardController get instance => Get.find();
 
   RxBool isLoading = true.obs;
+  // New variable for hovered index
+  RxInt hoveredIndex = (-1).obs;
   final RxList<int> monthlyIncidentCounts = List.filled(12, 0).obs;
   RxList<ReportIncidentModel> totalReportedIncidents = <ReportIncidentModel>[].obs;
   final DashboardRepository dashboardRepository = Get.put(DashboardRepository());
@@ -32,6 +34,17 @@ class DashboardController extends GetxController {
     'Forced Marriage',
     'Online Blackmail'
   ];
+
+
+  List<String> incidentCities = [
+    "Mumbai City", "Mumbai Suburban", "Thane", "Palghar", "Raigad", "Ratnagiri", "Sindhudurg",
+    "Pune", "Kolhapur", "Sangli", "Satara", "Solapur",
+    "Nashik", "Ahmednagar", "Dhule", "Jalgaon", "Nandurbar",
+    "Aurangabad", "Beed", "Jalna", "Osmanabad", "Latur", "Parbhani", "Hingoli", "Nanded",
+    "Amravati", "Akola", "Buldhana", "Washim", "Yavatmal",
+    "Nagpur", "Bhandara", "Chandrapur", "Gadchiroli", "Gondia", "Wardha"
+  ];
+
 
   @override
   void onInit() {
@@ -72,4 +85,35 @@ class DashboardController extends GetxController {
     selectedIncidentType.value = newType;
     _calculateMonthlyIncidentCounts(); // Recalculate counts when type changes
   }
+
+  // Method to get incident counts by city for pie chart
+  Map<String, double> getIncidentCountsByCity() {
+    Map<String, int> cityIncidentCounts = {};
+    int totalIncidents = 0;
+
+    // Initialize the city counts
+    for (var city in incidentCities) {
+      cityIncidentCounts[city] = 0;
+    }
+
+    // Count incidents for each city
+    for (var incident in totalReportedIncidents) {
+      if (incident.incidentCity != null && cityIncidentCounts.containsKey(incident.incidentCity)) {
+        cityIncidentCounts[incident.incidentCity] = cityIncidentCounts[incident.incidentCity]! + 1;
+        totalIncidents++;
+      }
+    }
+
+    // Calculate percentages
+    Map<String, double> cityIncidentPercentages = {};
+    for (var city in cityIncidentCounts.keys) {
+      if (totalIncidents > 0) {
+        cityIncidentPercentages[city] = (cityIncidentCounts[city]! / totalIncidents) * 100;
+      } else {
+        cityIncidentPercentages[city] = 0.0; // No incidents
+      }
+    }
+    return cityIncidentPercentages;
+  }
+
 }
