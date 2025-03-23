@@ -72,7 +72,6 @@ class CityIncidentOverviewPieChart extends StatelessWidget {
                             );
                           }
                           final entry = cityIncidentPercentages.entries.elementAt(controller.hoveredIndex.value);
-                          final count = entry.value;
                           return Text(
                             "${entry.key}",
                             style: TextStyle(fontSize:10, fontWeight: FontWeight.bold, color: _getColorForCity(entry.key)),
