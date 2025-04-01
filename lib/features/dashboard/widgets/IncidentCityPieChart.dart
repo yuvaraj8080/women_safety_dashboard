@@ -32,7 +32,7 @@ class CityIncidentOverviewPieChart extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("City Incident Overview", style: Theme.of(context).textTheme.headlineSmall),
+                  Text("District Overview", style: Theme.of(context).textTheme.headlineSmall),
                   const SizedBox(height: 10),
                   SizedBox(
                     height: 150,
