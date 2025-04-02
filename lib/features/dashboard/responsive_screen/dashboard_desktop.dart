@@ -11,7 +11,7 @@ import '../widgets/weekly_sales.dart';
 
 class DashboardDesktopScreen extends StatelessWidget {
   const DashboardDesktopScreen({super.key});
-
+ k
   @override
   Widget build(BuildContext context) {
     final dashController = Get.put(DashboardController());
