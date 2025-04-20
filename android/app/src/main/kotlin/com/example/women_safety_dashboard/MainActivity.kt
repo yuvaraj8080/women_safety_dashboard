@@ -1,4 +1,4 @@
-package com.example.women_safety_dashboard
+package com.women_safety_dashboard
 
 import io.flutter.embedding.android.FlutterActivity
 

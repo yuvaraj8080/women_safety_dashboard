@@ -147,7 +147,7 @@ class ReportWidget extends StatelessWidget {
                               size: 20),
                           SizedBox(width: 5),
                           Text(
-                            'Reported: $fullName',
+                            fullName,
                             style: TextStyle(
                               fontSize: 12.0,
                               fontWeight: FontWeight.w600,

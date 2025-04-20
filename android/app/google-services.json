@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1029361731735:android:173f67b28b26b3a97f41d2",
+        "mobilesdk_app_id": "1:1029361731735:android:5830c10fb462e0937f41d2",
         "android_client_info": {
-          "package_name": "com.SheShield.app"
+          "package_name": "com.SheShieldSafety.app"
         }
       },
       "oauth_client": [
@@ -44,9 +44,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1029361731735:android:26d3f4b99d5754157f41d2",
+        "mobilesdk_app_id": "1:1029361731735:android:978f99ed683be2f67f41d2",
         "android_client_info": {
-          "package_name": "com.example.women_safety_dashboard"
+          "package_name": "com.women_safety_dashboard"
         }
       },
       "oauth_client": [

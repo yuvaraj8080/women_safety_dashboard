@@ -14,6 +14,12 @@ class LiveLocationController extends GetxController {
   /// SHAKE MODE IS DISABLED
   RxBool isShakeModeEnabled = false.obs;
 
+
+
+  // Observable variable to track the current report type
+  RxString currentReportType = 'Incident'.obs; // Default to 'Incident'
+
+
   /// STORE ALL INCIDENT REPORTS DATA
   var reports = <ReportIncidentModel>[].obs;
 
@@ -29,6 +35,11 @@ class LiveLocationController extends GetxController {
     super.onInit();
     getCurrentLocation();
     fetchReports();
+  }
+
+  // Method to change the report type
+  void changeReportType(String type) {
+    currentReportType.value = type;
   }
 
   /// Fetch reports from Firestore
@@ -162,7 +173,13 @@ class LiveLocationController extends GetxController {
   void _showReportDetails(ReportIncidentModel report) {
     Get.dialog(
       AlertDialog(
-        title: Text(report.titleIncident),
+        title: Text(
+          report.titleIncident,
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         content: Container(
           width: 300,
           height: 400,
@@ -170,15 +187,17 @@ class LiveLocationController extends GetxController {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Description: ${report.incidentDescription}"),
-                SizedBox(height: 10),
-                Text("Reported by: ${report.fullName}"),
-                SizedBox(height: 10),
-                Text("Location: ${report.incidentCity}"),
-                SizedBox(height: 10),
-                Text("Date: ${report.formattedDateTime}"),
-                SizedBox(height: 10),
-                Text("Images:"),
+                SizedBox(height:20),
+                _buildLabelValue("Incident Category:", report.categoriesIncident),
+                _buildLabelValue("Description:", report.incidentDescription),
+                _buildLabelValue("Reported by:", report.fullName),
+                _buildLabelValue("Contact NO:", report.phoneNo),
+                _buildLabelValue("Location:", report.incidentCity),
+                _buildLabelValue("Date:", report.formattedDateTime),
+                Text(
+                  "Images:",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
                 SizedBox(height: 10),
                 if (report.incidentImages != null && report.incidentImages!.isNotEmpty)
                   Container(
@@ -196,8 +215,10 @@ class LiveLocationController extends GetxController {
                               fit: BoxFit.cover,
                               width: 100,
                               height: 200,
-                              placeholder: (context, url) => Center(child: CircularProgressIndicator()),
-                              errorWidget: (context, url, error) => Center(child: Icon(Icons.error)),
+                              placeholder: (context, url) =>
+                                  Center(child: CircularProgressIndicator()),
+                              errorWidget: (context, url, error) =>
+                                  Center(child: Icon(Icons.error)),
                             ),
                           ),
                         );
@@ -205,7 +226,10 @@ class LiveLocationController extends GetxController {
                     ),
                   )
                 else
-                  Text("No images available."),
+                  Text(
+                    "No images available.",
+                    style: TextStyle(fontSize: 14),
+                  ),
               ],
             ),
           ),
@@ -215,10 +239,114 @@ class LiveLocationController extends GetxController {
             onPressed: () {
               Get.back(); // Close the dialog
             },
-            child: Text("Close"),
+            child: Text(
+              "Close",
+              style: TextStyle(fontSize: 16),
+            ),
           ),
         ],
       ),
     );
   }
+
+  Widget _buildLabelValue(String label, String value) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 15.0),
+      child: RichText(
+        text: TextSpan(
+          style: TextStyle(fontSize: 14, color: Colors.black),
+          children: [
+            TextSpan(
+              text: "$label ",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+            ),
+            TextSpan(
+              text: value,
+              style: TextStyle(fontWeight: FontWeight.normal),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+
+  final List<Map<String, String>> sosReports = [
+    {
+      "name": "Alice Johnson",
+      "dateTime": "2025-04-20 10:15 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7749,-122.4194",
+    },
+    {
+      "name": "Brian Smith",
+      "dateTime": "2025-04-20 10:00 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7759,-122.4184",
+    },
+    {
+      "name": "Catherine Lee",
+      "dateTime": "2025-04-20 09:45 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7769,-122.4174",
+    },
+    {
+      "name": "Daniel Kim",
+      "dateTime": "2025-04-20 09:30 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7779,-122.4164",
+    },
+    {
+      "name": "Emma Davis",
+      "dateTime": "2025-04-20 09:15 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7789,-122.4154",
+    },
+    {
+      "name": "Frank Miller",
+      "dateTime": "2025-04-20 09:00 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7799,-122.4144",
+    },
+    {
+      "name": "Grace Wilson",
+      "dateTime": "2025-04-20 08:45 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7809,-122.4134",
+    },
+    {
+      "name": "Henry Thomas",
+      "dateTime": "2025-04-20 08:30 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7819,-122.4124",
+    },
+    {
+      "name": "Isabella Martinez",
+      "dateTime": "2025-04-20 08:15 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7829,-122.4114",
+    },
+    {
+      "name": "Jack White",
+      "dateTime": "2025-04-20 08:00 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7839,-122.4104",
+    },
+    {
+      "name": "Katie Brown",
+      "dateTime": "2025-04-20 07:45 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7849,-122.4094",
+    },
+    {
+      "name": "Leo Scott",
+      "dateTime": "2025-04-20 07:30 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7859,-122.4084",
+    },
+    {
+      "name": "Mia Allen",
+      "dateTime": "2025-04-20 07:15 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7869,-122.4074",
+    },
+    {
+      "name": "Nathan Young",
+      "dateTime": "2025-04-20 07:00 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7879,-122.4064",
+    },
+    {
+      "name": "Olivia Clark",
+      "dateTime": "2025-04-20 06:45 AM",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=37.7889,-122.4054",
+    },
+  ];
+
 }

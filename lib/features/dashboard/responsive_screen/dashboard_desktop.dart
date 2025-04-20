@@ -11,7 +11,7 @@ import '../widgets/weekly_sales.dart';
 
 class DashboardDesktopScreen extends StatelessWidget {
   const DashboardDesktopScreen({super.key});
- k
+
   @override
   Widget build(BuildContext context) {
     final dashController = Get.put(DashboardController());
@@ -29,20 +29,23 @@ class DashboardDesktopScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.sm8),
 
                   /// CARDS
-                     Row(
-                        children: [
-                          Expanded(child: TDashboardCard(
-                              title: 'Total Crime', subTitle:dashController.totalReportedIncidents.length.toString())),
-                          const SizedBox(width: TSizes.ms12),
-                           Expanded(child: TDashboardCard(
-                              title: 'Solved Crime', subTitle:"9")),
-                          const SizedBox(width: TSizes.ms12),
-                          Expanded(child: TDashboardCard(
-                              title: 'Unsolved Crime', subTitle:"5")),
-                          const SizedBox(width: TSizes.ms12),
-                          Expanded(child: TDashboardCard(
-                              title: 'Pending Crime',subTitle: "20")),
-                        ]),
+                     Obx((){
+                         return Row(
+                            children: [
+                              Expanded(child: TDashboardCard(
+                                  title: 'Total Crime', subTitle:dashController.totalReportedIncidents.length.toString())),
+                              const SizedBox(width: TSizes.ms12),
+                               Expanded(child: TDashboardCard(
+                                  title: 'Solved Crime', subTitle:"10")),
+                              const SizedBox(width: TSizes.ms12),
+                              Expanded(child: TDashboardCard(
+                                  title: 'Unsolved Crime', subTitle:"3")),
+                              const SizedBox(width: TSizes.ms12),
+                              Expanded(child: TDashboardCard(
+                                  title: 'Pending Crime',subTitle: "3")),
+                            ]);
+                       }
+                     ),
                   const SizedBox(height: TSizes.ms12),
 
                   // / GRAPH IN THE DASHBOARD
